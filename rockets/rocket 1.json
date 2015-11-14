@@ -1,0 +1,16 @@
+{
+  "parts" : [
+    "mk1-command-pod",
+    "mk16"
+  ],
+  "previousStage" : {
+    "parts": [
+      "tr-18a",
+      "rt-5",
+      "basic-fin",
+      "basic-fin",
+      "basic-fin",
+      "basic-fin"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "fullName" : "RT-5 \"Flea\" Solid Fuel Booster",
+  "cost" : 200,
+  "type" : "srb",
+  "totalMass" : 1.5,
+  "fuelMass": 1.05,
+  "isp" : {
+    "vac" : 165,
+    "asl" : 140
+  }
+}
