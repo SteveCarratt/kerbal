@@ -1,0 +1,16 @@
+{
+  "parts" : [
+    "tr-18a",
+    "rt-5",
+    "basic-fin",
+    "basic-fin",
+    "basic-fin",
+    "basic-fin"
+  ],
+  "payload" : {
+    "parts": [
+      "mk-1-command-pod",
+      "mk-16"
+    ]
+  }
+}

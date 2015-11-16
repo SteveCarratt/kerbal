@@ -1,0 +1,7 @@
+{
+  "fullName" : "FL-T100 Fuel Tank",
+  "cost" : 150,
+  "type" : "fuel",
+  "totalMass" : 0.5625,
+  "fuelMass": 0.49
+}

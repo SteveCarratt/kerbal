@@ -1,0 +1,13 @@
+{
+  "parts" : [
+    "tr-18a",
+    "rt-5"
+  ],
+  "payload" : {
+    "parts": [
+      "mk-1-command-pod",
+      "mk-16",
+      "heat-shield-125m"
+      ]
+  }
+}

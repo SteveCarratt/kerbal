@@ -1,0 +1,11 @@
+{
+  "fullName" : "RT-10 \"Hammer\" Solid Fuel Booster",
+  "cost" : 400,
+  "type" : "srb",
+  "totalMass" : 3.5625,
+  "fuelMass": 2.81,
+  "isp" : {
+    "vac" : 195,
+    "asl" : 170
+  }
+}

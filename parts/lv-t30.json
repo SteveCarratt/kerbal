@@ -1,0 +1,10 @@
+{
+  "fullName" : "LV-T30 \"Reliant\" Liquid Fuel Engine",
+  "cost" : 1100,
+  "type" : "engine",
+  "totalMass" : 1.25,
+  "isp" : {
+    "vac" : 280,
+    "asl" : 300
+  }
+}

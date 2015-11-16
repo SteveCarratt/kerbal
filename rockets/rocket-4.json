@@ -1,0 +1,34 @@
+{
+  "parts" : [
+    "tr-18a",
+    "rt-10"
+  ],
+  "payload" : {
+    "parts": [
+      "tr-18a",
+      "fl-t100",
+      "fl-t100",
+      "fl-t100",
+      "fl-t100",
+      "lv-t30",
+      "basic-fin",
+      "basic-fin",
+      "basic-fin",
+      "basic-fin"
+    ],
+    "payload": {
+      "parts": [
+        "tr-18a",
+        "rt-10"
+      ],
+      "payload": {
+        "parts": [
+          "mk-1-command-pod",
+          "mk-16",
+          "heat-shield-125m"
+
+        ]
+      }
+    }
+  }
+}
