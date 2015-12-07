@@ -4,15 +4,15 @@
 
 var expect = require("chai").expect;
 var orbitalEnergy = require("../lib/orbital-velocity.js");
-var kerbinMass = require('../constants/kerbin-mass.js');
-var kerbinRadius = require('../constants/kerbin-radius.js');
+var bodies = require('../constants/bodies.js');
+
 
 describe("orbital energy", function () {
     var tests = [{
-        args: [kerbinMass, kerbinRadius + 80000],
+        args: [bodies.kerbin.mass, bodies.kerbin.radius + 80000],
         expected: 2278
     },{
-            args: [kerbinMass, kerbinRadius],
+            args: [bodies.kerbin.mass, bodies.kerbin.radius],
             expected: 2426
     }
     ];

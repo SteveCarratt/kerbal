@@ -1,19 +1,438 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e205b9bd-0c5e-4d78-aa06-e388580ad343" name="Default" comment="hohmann transfer">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/apps/calculate-delta-v.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/constants/kerbin-mass.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/constants/kerbin-radius.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/delta-V.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/hohmann-part-1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/hohmann-part-2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/delta-v-tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/hohman-part-1-tests.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/hohman-part-2-tests.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/orbital-energy.js" afterPath="$PROJECT_DIR$/lib/orbital-velocity.js" />
+    <list default="true" id="e205b9bd-0c5e-4d78-aa06-e388580ad343" name="Default" comment="flight plan">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/flight-Plan.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/delta-V.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/delta-v-tests.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/constants/kerbin-mass.js" afterPath="$PROJECT_DIR$/constants/bodies.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/gravitational-potential-energy.js" afterPath="$PROJECT_DIR$/lib/gravitational-potential-energy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/calculate-delta-v.js" afterPath="$PROJECT_DIR$/apps/calculate-delta-v.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/hohmann-part-1.js" afterPath="$PROJECT_DIR$/lib/hohmann-part-1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/hohmann-part-2.js" afterPath="$PROJECT_DIR$/lib/hohmann-part-2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/LICENSE" afterPath="$PROJECT_DIR$/node_modules/lodash/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/README.md" afterPath="$PROJECT_DIR$/node_modules/lodash/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/chunk.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/chunk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/compact.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/compact.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/difference.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/difference.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/drop.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/drop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/dropRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/dropRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/dropRightWhile.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/dropRightWhile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/dropWhile.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/dropWhile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/fill.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/fill.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/findIndex.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/findIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/findLastIndex.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/findLastIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/first.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/first.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/flatten.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/flatten.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/flattenDeep.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/flattenDeep.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/head.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/head.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/indexOf.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/indexOf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/initial.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/initial.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/intersection.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/intersection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/last.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/last.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/lastIndexOf.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/lastIndexOf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/object.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/object.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/pull.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/pull.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/pullAt.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/pullAt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/remove.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/remove.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/rest.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/rest.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/slice.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/slice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/sortedIndex.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/sortedIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/sortedLastIndex.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/sortedLastIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/tail.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/tail.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/take.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/take.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/takeRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/takeRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/takeRightWhile.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/takeRightWhile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/takeWhile.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/takeWhile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/union.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/union.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/uniq.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/uniq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/unique.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/unique.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/unzip.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/unzip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/unzipWith.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/unzipWith.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/without.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/without.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/xor.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/xor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/zip.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/zip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/zipObject.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/zipObject.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/array/zipWith.js" afterPath="$PROJECT_DIR$/node_modules/lodash/array/zipWith.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/chain.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/chain.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/commit.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/commit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/concat.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/concat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/lodash.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/lodash.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/plant.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/plant.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/reverse.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/reverse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/run.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/run.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/tap.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/tap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/thru.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/thru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/toJSON.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/toJSON.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/toString.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/toString.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/value.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/value.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/valueOf.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/valueOf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperChain.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperChain.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperCommit.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperCommit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperConcat.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperConcat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperPlant.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperPlant.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperReverse.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperReverse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperToString.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperToString.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperValue.js" afterPath="$PROJECT_DIR$/node_modules/lodash/chain/wrapperValue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/all.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/all.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/any.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/any.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/at.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/at.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/collect.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/collect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/contains.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/contains.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/countBy.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/countBy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/detect.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/detect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/each.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/each.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/eachRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/eachRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/every.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/every.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/filter.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/filter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/find.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/find.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/findLast.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/findLast.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/findWhere.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/findWhere.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/foldl.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/foldl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/foldr.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/foldr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/forEach.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/forEach.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/forEachRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/forEachRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/groupBy.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/groupBy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/include.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/include.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/includes.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/includes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/indexBy.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/indexBy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/inject.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/inject.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/invoke.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/invoke.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/map.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/max.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/max.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/min.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/partition.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/partition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/pluck.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/pluck.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/reduce.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/reduce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/reduceRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/reduceRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/reject.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/reject.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/sample.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/sample.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/select.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/select.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/shuffle.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/shuffle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/size.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/size.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/some.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/some.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/sortBy.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/sortBy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/sortByAll.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/sortByAll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/sortByOrder.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/sortByOrder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/sum.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/sum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/collection/where.js" afterPath="$PROJECT_DIR$/node_modules/lodash/collection/where.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/date.js" afterPath="$PROJECT_DIR$/node_modules/lodash/date.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/date/now.js" afterPath="$PROJECT_DIR$/node_modules/lodash/date/now.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/after.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/after.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/ary.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/ary.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/backflow.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/backflow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/before.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/before.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/bind.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/bind.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/bindAll.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/bindAll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/bindKey.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/bindKey.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/compose.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/compose.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/curry.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/curry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/curryRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/curryRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/debounce.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/debounce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/defer.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/defer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/delay.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/delay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/flow.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/flow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/flowRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/flowRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/memoize.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/memoize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/modArgs.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/modArgs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/negate.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/negate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/once.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/once.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/partial.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/partial.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/partialRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/partialRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/rearg.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/rearg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/restParam.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/restParam.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/spread.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/spread.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/throttle.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/throttle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/function/wrap.js" afterPath="$PROJECT_DIR$/node_modules/lodash/function/wrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/index.js" afterPath="$PROJECT_DIR$/node_modules/lodash/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/LazyWrapper.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/LazyWrapper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/LodashWrapper.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/LodashWrapper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/MapCache.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/MapCache.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/SetCache.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/SetCache.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/arrayConcat.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/arrayConcat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/arrayCopy.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/arrayCopy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/arrayEach.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/arrayEach.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/arrayEachRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/arrayEachRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/arrayEvery.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/arrayEvery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/arrayExtremum.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/arrayExtremum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/arrayFilter.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/arrayFilter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/arrayMap.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/arrayMap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/arrayPush.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/arrayPush.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/arrayReduce.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/arrayReduce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/arrayReduceRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/arrayReduceRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/arraySome.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/arraySome.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/arraySum.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/arraySum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/assignDefaults.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/assignDefaults.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/assignOwnDefaults.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/assignOwnDefaults.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/assignWith.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/assignWith.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseAssign.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseAssign.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseAt.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseAt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseCallback.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseCallback.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseClone.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseClone.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseCompareAscending.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseCompareAscending.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseCopy.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseCopy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseCreate.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseCreate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseDelay.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseDelay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseDifference.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseDifference.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseEach.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseEach.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseEachRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseEachRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseEvery.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseEvery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseExtremum.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseExtremum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseFill.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseFill.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseFilter.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseFilter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseFind.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseFind.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseFindIndex.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseFindIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseFlatten.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseFlatten.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseFor.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseFor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseForIn.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseForIn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseForOwn.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseForOwn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseForOwnRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseForOwnRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseForRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseForRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseFunctions.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseFunctions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseGet.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseGet.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseIndexOf.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseIndexOf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseIsEqual.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseIsEqual.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseIsEqualDeep.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseIsEqualDeep.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseIsFunction.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseIsFunction.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseIsMatch.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseIsMatch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseLodash.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseLodash.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseMap.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseMap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseMatches.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseMatches.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseMatchesProperty.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseMatchesProperty.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseMerge.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseMerge.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseMergeDeep.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseMergeDeep.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseProperty.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseProperty.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/basePropertyDeep.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/basePropertyDeep.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/basePullAt.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/basePullAt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseRandom.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseRandom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseReduce.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseReduce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseSetData.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseSetData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseSlice.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseSlice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseSome.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseSome.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseSortBy.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseSortBy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseSortByOrder.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseSortByOrder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseSum.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseSum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseToString.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseToString.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseUniq.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseUniq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseValues.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseValues.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseWhile.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseWhile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/baseWrapperValue.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/baseWrapperValue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/binaryIndex.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/binaryIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/binaryIndexBy.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/binaryIndexBy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/bindCallback.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/bindCallback.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/bufferClone.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/bufferClone.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/cacheIndexOf.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/cacheIndexOf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/cachePush.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/cachePush.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/charsLeftIndex.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/charsLeftIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/charsRightIndex.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/charsRightIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/compareAscending.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/compareAscending.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/compareMultiple.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/compareMultiple.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/composeArgs.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/composeArgs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/composeArgsRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/composeArgsRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createAggregator.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createAggregator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createAssigner.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createAssigner.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createBaseEach.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createBaseEach.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createBaseFor.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createBaseFor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createBindWrapper.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createBindWrapper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createCache.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createCache.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createCompounder.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createCompounder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createCtorWrapper.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createCtorWrapper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createCurry.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createCurry.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createDefaults.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createDefaults.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createExtremum.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createExtremum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createFind.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createFind.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createFindIndex.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createFindIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createFindKey.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createFindKey.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createFlow.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createFlow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createForEach.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createForEach.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createForIn.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createForIn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createForOwn.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createForOwn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createHybridWrapper.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createHybridWrapper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createObjectMapper.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createObjectMapper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createPadDir.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createPadDir.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createPadding.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createPadding.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createPartial.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createPartial.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createPartialWrapper.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createPartialWrapper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createReduce.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createReduce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createRound.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createRound.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createSortedIndex.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createSortedIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/createWrapper.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/createWrapper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/deburrLetter.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/deburrLetter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/equalArrays.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/equalArrays.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/equalByTag.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/equalByTag.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/equalObjects.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/equalObjects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/escapeHtmlChar.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/escapeHtmlChar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/escapeRegExpChar.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/escapeRegExpChar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/escapeStringChar.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/escapeStringChar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/getData.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/getData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/getFuncName.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/getFuncName.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/getLength.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/getLength.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/getMatchData.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/getMatchData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/getNative.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/getNative.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/getView.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/getView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/indexOfNaN.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/indexOfNaN.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/initCloneArray.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/initCloneArray.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/initCloneByTag.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/initCloneByTag.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/initCloneObject.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/initCloneObject.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/invokePath.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/invokePath.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/isArrayLike.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/isArrayLike.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/isIndex.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/isIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/isIterateeCall.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/isIterateeCall.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/isKey.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/isKey.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/isLaziable.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/isLaziable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/isLength.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/isLength.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/isObjectLike.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/isObjectLike.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/isSpace.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/isSpace.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/isStrictComparable.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/isStrictComparable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/lazyClone.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/lazyClone.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/lazyReverse.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/lazyReverse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/lazyValue.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/lazyValue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/mapDelete.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/mapDelete.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/mapGet.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/mapGet.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/mapHas.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/mapHas.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/mapSet.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/mapSet.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/mergeData.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/mergeData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/mergeDefaults.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/mergeDefaults.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/metaMap.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/metaMap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/pickByArray.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/pickByArray.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/pickByCallback.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/pickByCallback.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/reEscape.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/reEscape.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/reEvaluate.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/reEvaluate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/reInterpolate.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/reInterpolate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/realNames.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/realNames.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/reorder.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/reorder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/replaceHolders.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/replaceHolders.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/setData.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/setData.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/shimKeys.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/shimKeys.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/sortedUniq.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/sortedUniq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/toIterable.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/toIterable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/toObject.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/toObject.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/toPath.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/toPath.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/trimmedLeftIndex.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/trimmedLeftIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/trimmedRightIndex.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/trimmedRightIndex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/unescapeHtmlChar.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/unescapeHtmlChar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/internal/wrapperClone.js" afterPath="$PROJECT_DIR$/node_modules/lodash/internal/wrapperClone.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/clone.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/clone.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/cloneDeep.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/cloneDeep.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/eq.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/eq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/gt.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/gt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/gte.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/gte.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isArguments.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isArguments.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isArray.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isArray.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isBoolean.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isBoolean.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isDate.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isDate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isElement.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isElement.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isEmpty.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isEmpty.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isEqual.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isEqual.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isError.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isError.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isFinite.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isFinite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isFunction.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isFunction.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isMatch.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isMatch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isNaN.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isNaN.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isNative.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isNative.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isNull.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isNull.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isNumber.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isNumber.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isObject.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isObject.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isPlainObject.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isPlainObject.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isRegExp.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isRegExp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isString.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isString.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isTypedArray.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isTypedArray.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/isUndefined.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/isUndefined.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/lt.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/lt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/lte.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/lte.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/toArray.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/toArray.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/lang/toPlainObject.js" afterPath="$PROJECT_DIR$/node_modules/lodash/lang/toPlainObject.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/math.js" afterPath="$PROJECT_DIR$/node_modules/lodash/math.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/math/add.js" afterPath="$PROJECT_DIR$/node_modules/lodash/math/add.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/math/ceil.js" afterPath="$PROJECT_DIR$/node_modules/lodash/math/ceil.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/math/floor.js" afterPath="$PROJECT_DIR$/node_modules/lodash/math/floor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/math/max.js" afterPath="$PROJECT_DIR$/node_modules/lodash/math/max.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/math/min.js" afterPath="$PROJECT_DIR$/node_modules/lodash/math/min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/math/round.js" afterPath="$PROJECT_DIR$/node_modules/lodash/math/round.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/math/sum.js" afterPath="$PROJECT_DIR$/node_modules/lodash/math/sum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/number.js" afterPath="$PROJECT_DIR$/node_modules/lodash/number.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/number/inRange.js" afterPath="$PROJECT_DIR$/node_modules/lodash/number/inRange.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/number/random.js" afterPath="$PROJECT_DIR$/node_modules/lodash/number/random.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/assign.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/assign.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/create.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/create.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/defaults.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/defaults.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/defaultsDeep.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/defaultsDeep.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/extend.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/extend.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/findKey.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/findKey.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/findLastKey.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/findLastKey.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/forIn.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/forIn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/forInRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/forInRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/forOwn.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/forOwn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/forOwnRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/forOwnRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/functions.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/functions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/get.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/get.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/has.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/has.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/invert.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/invert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/keys.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/keys.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/keysIn.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/keysIn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/mapKeys.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/mapKeys.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/mapValues.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/mapValues.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/merge.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/merge.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/methods.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/methods.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/omit.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/omit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/pairs.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/pairs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/pick.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/pick.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/result.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/result.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/set.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/set.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/transform.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/transform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/values.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/values.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/object/valuesIn.js" afterPath="$PROJECT_DIR$/node_modules/lodash/object/valuesIn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/package.json" afterPath="$PROJECT_DIR$/node_modules/lodash/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/camelCase.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/camelCase.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/capitalize.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/capitalize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/deburr.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/deburr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/endsWith.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/endsWith.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/escape.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/escape.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/escapeRegExp.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/escapeRegExp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/kebabCase.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/kebabCase.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/pad.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/pad.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/padLeft.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/padLeft.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/padRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/padRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/parseInt.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/parseInt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/repeat.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/repeat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/snakeCase.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/snakeCase.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/startCase.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/startCase.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/startsWith.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/startsWith.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/template.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/template.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/templateSettings.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/templateSettings.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/trim.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/trim.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/trimLeft.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/trimLeft.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/trimRight.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/trimRight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/trunc.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/trunc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/unescape.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/unescape.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/string/words.js" afterPath="$PROJECT_DIR$/node_modules/lodash/string/words.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/support.js" afterPath="$PROJECT_DIR$/node_modules/lodash/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/attempt.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/attempt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/callback.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/callback.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/constant.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/constant.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/identity.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/identity.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/iteratee.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/iteratee.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/matches.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/matches.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/matchesProperty.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/matchesProperty.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/method.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/method.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/methodOf.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/methodOf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/mixin.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/mixin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/noop.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/noop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/property.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/property.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/propertyOf.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/propertyOf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/range.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/range.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/times.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/times.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/lodash/utility/uniqueId.js" afterPath="$PROJECT_DIR$/node_modules/lodash/utility/uniqueId.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/hohman-part-1-tests.js" afterPath="$PROJECT_DIR$/test/hohman-part-1-tests.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/hohman-part-2-tests.js" afterPath="$PROJECT_DIR$/test/hohman-part-2-tests.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/orbital-energy-tests.js" afterPath="$PROJECT_DIR$/test/orbital-energy-tests.js" />
     </list>
     <ignored path="kerbal.iws" />
@@ -40,7 +459,7 @@
         <entry file="file://$PROJECT_DIR$/test/orbital-energy-tests.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -52,43 +471,7 @@
         <entry file="file://$PROJECT_DIR$/lib/hohmann-part-1.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-              <folding>
-                <element signature="e#0#42#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kinetic-energy.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/kinetic-energy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#42#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="orbital-velocity.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/orbital-velocity.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-              <folding>
-                <element signature="e#1#43#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gravitational-potential-energy.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/gravitational-potential-energy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+              <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -100,7 +483,7 @@
         <entry file="file://$PROJECT_DIR$/apps/calculate-delta-v.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -108,8 +491,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="delta-V.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/delta-V.js">
+      <file leaf-file-name="flight-Plan.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/flight-Plan.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.60895884">
+              <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#42#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bodies.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/constants/bodies.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#42#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kerbin-radius.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/constants/kerbin-radius.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="23" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#42#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hohmann-part-2.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/hohmann-part-2.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hohman-part-1-tests.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/hohman-part-1-tests.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
@@ -120,34 +549,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hohmann-part-2.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/hohmann-part-2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22235434">
-              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="hohman-part-2-tests.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/hohman-part-2-tests.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="delta-v-tests.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/delta-v-tests.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#42#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -206,16 +613,20 @@
         <option value="$PROJECT_DIR$/lib/orbital-energy.js" />
         <option value="$PROJECT_DIR$/constants/kerbin-mass.js" />
         <option value="$PROJECT_DIR$/constants/kerbin-radius.js" />
-        <option value="$PROJECT_DIR$/lib/delta-V.js" />
         <option value="$PROJECT_DIR$/test/delta-v-tests.js" />
-        <option value="$PROJECT_DIR$/test/hohman-part-1-tests.js" />
-        <option value="$PROJECT_DIR$/test/hohman-part-2-tests.js" />
         <option value="$PROJECT_DIR$/lib/orbital-velocity.js" />
         <option value="$PROJECT_DIR$/lib/gravitational-potential-energy.js" />
-        <option value="$PROJECT_DIR$/apps/calculate-delta-v.js" />
+        <option value="$PROJECT_DIR$/lib/delta-V.js" />
+        <option value="$PROJECT_DIR$/lib/sum-delta-V.js" />
+        <option value="$PROJECT_DIR$/lib/flight-state.js" />
         <option value="$PROJECT_DIR$/test/orbital-energy-tests.js" />
         <option value="$PROJECT_DIR$/lib/hohmann-part-1.js" />
+        <option value="$PROJECT_DIR$/test/hohman-part-2-tests.js" />
+        <option value="$PROJECT_DIR$/test/hohman-part-1-tests.js" />
         <option value="$PROJECT_DIR$/lib/hohmann-part-2.js" />
+        <option value="$PROJECT_DIR$/apps/calculate-delta-v.js" />
+        <option value="$PROJECT_DIR$/constants/bodies.js" />
+        <option value="$PROJECT_DIR$/lib/flight-Plan.js" />
       </list>
     </option>
   </component>
@@ -259,8 +670,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -351,6 +760,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -487,38 +898,44 @@
       <option name="project" value="LOCAL" />
       <updated>1449165336039</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="hohmann transfer">
+      <created>1449493108559</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1449493108559</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test - 2015.12.07 at 12h 45m 04s.xml">
-      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Test - 2015.12.07 at 12h 45m 40s.xml">
-      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Test - 2015.12.07 at 12h 46m 21s.xml">
-      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Test - 2015.12.07 at 12h 46m 35s.xml">
-      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Test - 2015.12.07 at 12h 46m 58s.xml">
-      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Test - 2015.12.07 at 12h 47m 43s.xml">
-      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Test - 2015.12.07 at 12h 48m 57s.xml">
-      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
-    <history-entry file="Test - 2015.12.07 at 12h 49m 37s.xml">
-      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
-    </history-entry>
     <history-entry file="Test - 2015.12.07 at 12h 49m 52s.xml">
       <configuration name="Test" configurationId="mocha-javascript-test-runner" />
     </history-entry>
     <history-entry file="Test - 2015.12.07 at 12h 56m 20s.xml">
+      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Test - 2015.12.07 at 13h 11m 58s.xml">
+      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Test - 2015.12.07 at 14h 01m 15s.xml">
+      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Test - 2015.12.07 at 14h 01m 58s.xml">
+      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Test - 2015.12.07 at 14h 03m 01s.xml">
+      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Test - 2015.12.07 at 14h 03m 35s.xml">
+      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Test - 2015.12.07 at 14h 04m 22s.xml">
+      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Test - 2015.12.07 at 14h 04m 31s.xml">
+      <configuration name="Test" configurationId="mocha-javascript-test-runner" />
+    </history-entry>
+    <history-entry file="Test - 2015.12.07 at 14h 04m 39s.xml">
       <configuration name="Test" configurationId="mocha-javascript-test-runner" />
     </history-entry>
   </component>
@@ -526,15 +943,16 @@
     <frame x="-7" y="0" width="1294" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27073553" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2754777" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299923" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3315343" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33673468" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39969373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -546,7 +964,6 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
@@ -565,7 +982,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added energies" />
     <MESSAGE value="hohmann transfer" />
-    <option name="LAST_COMMIT_MESSAGE" value="hohmann transfer" />
+    <MESSAGE value="flight plan" />
+    <option name="LAST_COMMIT_MESSAGE" value="flight plan" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -804,32 +1222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/rocket-tests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/constants/kerbin-radius.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/calculate-stage-delta-v.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/constants/gravitation-constant.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -840,21 +1232,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/constants/kerbin-mass.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/engine-fuel-unit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -880,27 +1261,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/hohman-part-1-tests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/hohman-part-2-tests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -910,16 +1270,6 @@
           <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
           <folding>
             <element signature="e#1#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/delta-v-tests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -944,20 +1294,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/delta-V.js">
+    <entry file="file://$PROJECT_DIR$/apps/calculate-stage-delta-v.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
+          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/calculate-delta-v.js">
+    <entry file="file://$PROJECT_DIR$/test/rocket-tests.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/constants/kerbin-radius.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="23" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>
@@ -967,17 +1323,25 @@
     <entry file="file://$PROJECT_DIR$/test/orbital-energy-tests.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/hohmann-part-1.js">
+    <entry file="file://$PROJECT_DIR$/test/hohman-part-2-tests.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/hohman-part-1-tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#0#42#0" expanded="false" />
           </folding>
@@ -986,9 +1350,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/hohmann-part-2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22235434">
-          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/hohmann-part-1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/calculate-delta-v.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/constants/bodies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/lodash/array/intersection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3329298">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/flight-Plan.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60895884">
+          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

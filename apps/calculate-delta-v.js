@@ -2,17 +2,23 @@
  * Created by Steve on 07/12/2015.
  */
 
-var kerbinMass = require('../constants/kerbin-mass.js');
-var kerbinRadius = require('../constants/kerbin-radius.js');
-var hohmannPart1 = require('../lib/hohmann-part-1.js');
-var hohmannPart2 = require('../lib/hohmann-part-1.js');
+var flightPlan = require('../lib/flight-plan.js');
 
-var orbitRadius = 80000;
-var orbitRadius2 = 100000;
+var plan = flightPlan([
+    {
+        "type": "launch",
+        "body": "kerbin"
+    },
+    {
+        "type": "adjust-orbit",
+        "apoapsis": 120000,
+        "periapsis": 100000
+    },
+    {
+        "type": "adjust-orbit",
+        "apoapsis": 120000,
+        "periapsis": 37000
+    }]
+);
+console.log(plan);
 
-var burn1 = hohmannPart1(kerbinMass, kerbinRadius + orbitRadius, kerbinRadius + orbitRadius2);
-var burn2 = hohmannPart2(kerbinMass, kerbinRadius + orbitRadius, kerbinRadius + orbitRadius2);
-
-
-console.log(burn1);
-console.log(burn2);

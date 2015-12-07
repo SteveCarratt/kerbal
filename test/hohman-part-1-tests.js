@@ -5,12 +5,10 @@
 
 var expect = require("chai").expect;
 var hohmannPart1 = require("../lib/hohmann-part-1.js");
-var kerbinMass = require('../constants/kerbin-mass.js');
-var kerbinRadius = require('../constants/kerbin-radius.js');
 
 describe("hohmann part 1", function () {
     var tests = [{
-        args: [kerbinMass, kerbinRadius + 100000, kerbinRadius + 200000],
+        args: ["kerbin",100000, 200000],
         expected: 73.65
     }];
 
