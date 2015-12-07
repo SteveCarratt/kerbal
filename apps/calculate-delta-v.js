@@ -3,6 +3,7 @@
  */
 
 var flightPlan = require('../lib/flight-plan.js');
+var _ = require('lodash');
 
 var plan = flightPlan([
     {
@@ -21,4 +22,8 @@ var plan = flightPlan([
     }]
 );
 console.log(plan);
+var totalDeltaV = _.sum(plan, function (section) {
+    return section.deltaVUsed;
+});
 
+console.log(totalDeltaV);
