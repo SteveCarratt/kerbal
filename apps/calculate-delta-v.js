@@ -17,8 +17,8 @@ var plan = flightPlan([
     },
     {
         "type": "adjust-orbit",
-        "apoapsis": 12000000,
-        "periapsis": 37000
+        "angleChange": 23,
+        "parentBodyDistance": 12000000
     }]
 );
 
