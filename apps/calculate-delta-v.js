@@ -12,16 +12,18 @@ var plan = flightPlan([
     },
     {
         "type": "adjust-orbit",
-        "apoapsis": 120000,
+        "apoapsis": 12000000,
         "periapsis": 100000
     },
     {
         "type": "adjust-orbit",
-        "apoapsis": 120000,
+        "apoapsis": 12000000,
         "periapsis": 37000
     }]
 );
+
 console.log(plan);
+
 var totalDeltaV = _.sum(plan, function (section) {
     return section.deltaVUsed;
 });
